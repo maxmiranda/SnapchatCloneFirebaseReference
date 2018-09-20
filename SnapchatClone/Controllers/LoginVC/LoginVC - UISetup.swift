@@ -2,7 +2,7 @@
 //  LoginVC - UISetup.swift
 //  SnapchatClone
 //
-//  Created by Max Miranda on 9/20/18.
+//  Created by Max Miranda on 9/18/18.
 //  Copyright © 2018 ___MaxAMiranda___. All rights reserved.
 //
 import UIKit

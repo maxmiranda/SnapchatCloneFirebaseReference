@@ -19,6 +19,11 @@
 		9F2FED7E2154298000C200F9 /* LoginVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED7D2154298000C200F9 /* LoginVC - UISetup.swift */; };
 		9F2FED832154380800C200F9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED822154380800C200F9 /* FeedVC.swift */; };
 		9F2FED882154384000C200F9 /* ShowImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED872154384000C200F9 /* ShowImageVC.swift */; };
+		9F2FED8A21543D1700C200F9 /* FeedVC - TableViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8921543D1700C200F9 /* FeedVC - TableViewFunctions.swift */; };
+		9F2FED8C21543DEE00C200F9 /* FeedVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8B21543DEE00C200F9 /* FeedVC - UISetup.swift */; };
+		9F2FED8E21543F5600C200F9 /* SnapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8D21543F5600C200F9 /* SnapImage.swift */; };
+		9F2FED912154403D00C200F9 /* SnapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED902154403D00C200F9 /* SnapUser.swift */; };
+		9F2FED952154452D00C200F9 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */; };
 		CF235B641041ED7DF6CAFA7B /* Pods_SnapchatClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCEE17E72E8857C42689DC1 /* Pods_SnapchatClone.framework */; };
 		E7B18D1310BFD3FEE07B74E7 /* Pods_SnapchatCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699302F709B9C9939E2C3A1A /* Pods_SnapchatCloneTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +70,11 @@
 		9F2FED7D2154298000C200F9 /* LoginVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC - UISetup.swift"; sourceTree = "<group>"; };
 		9F2FED822154380800C200F9 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		9F2FED872154384000C200F9 /* ShowImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageVC.swift; sourceTree = "<group>"; };
+		9F2FED8921543D1700C200F9 /* FeedVC - TableViewFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - TableViewFunctions.swift"; sourceTree = "<group>"; };
+		9F2FED8B21543DEE00C200F9 /* FeedVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - UISetup.swift"; sourceTree = "<group>"; };
+		9F2FED8D21543F5600C200F9 /* SnapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapImage.swift; sourceTree = "<group>"; };
+		9F2FED902154403D00C200F9 /* SnapUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapUser.swift; sourceTree = "<group>"; };
+		9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		DDCEE17E72E8857C42689DC1 /* Pods_SnapchatClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2090E87B00A1E01E101B745 /* Pods_SnapchatCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,9 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				9F2FED4A2154245000C200F9 /* AppDelegate.swift */,
-				9F2FED862154382D00C200F9 /* ShowImageVC */,
-				9F2FED81215437E600C200F9 /* FeedVC */,
-				9F2FED7C2154296B00C200F9 /* LoginVC */,
+				9F2FED932154450C00C200F9 /* Cells */,
+				9F2FED92215444F600C200F9 /* Controllers */,
+				9F2FED8F21543FF900C200F9 /* Models */,
 				9F2FED4E2154245000C200F9 /* Main.storyboard */,
 				9F2FED512154245400C200F9 /* Assets.xcassets */,
 				9F2FED532154245400C200F9 /* LaunchScreen.storyboard */,
@@ -179,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				9F2FED822154380800C200F9 /* FeedVC.swift */,
+				9F2FED8B21543DEE00C200F9 /* FeedVC - UISetup.swift */,
+				9F2FED8921543D1700C200F9 /* FeedVC - TableViewFunctions.swift */,
 			);
 			path = FeedVC;
 			sourceTree = "<group>";
@@ -189,6 +201,33 @@
 				9F2FED872154384000C200F9 /* ShowImageVC.swift */,
 			);
 			path = ShowImageVC;
+			sourceTree = "<group>";
+		};
+		9F2FED8F21543FF900C200F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F2FED8D21543F5600C200F9 /* SnapImage.swift */,
+				9F2FED902154403D00C200F9 /* SnapUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F2FED92215444F600C200F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F2FED862154382D00C200F9 /* ShowImageVC */,
+				9F2FED81215437E600C200F9 /* FeedVC */,
+				9F2FED7C2154296B00C200F9 /* LoginVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F2FED932154450C00C200F9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C9A4BF921A465C36B82A9429 /* Frameworks */ = {
@@ -419,10 +458,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2FED882154384000C200F9 /* ShowImageVC.swift in Sources */,
+				9F2FED8C21543DEE00C200F9 /* FeedVC - UISetup.swift in Sources */,
 				9F2FED832154380800C200F9 /* FeedVC.swift in Sources */,
+				9F2FED8A21543D1700C200F9 /* FeedVC - TableViewFunctions.swift in Sources */,
+				9F2FED912154403D00C200F9 /* SnapUser.swift in Sources */,
 				9F2FED7E2154298000C200F9 /* LoginVC - UISetup.swift in Sources */,
 				9F2FED4D2154245000C200F9 /* LoginVC.swift in Sources */,
 				9F2FED4B2154245000C200F9 /* AppDelegate.swift in Sources */,
+				9F2FED8E21543F5600C200F9 /* SnapImage.swift in Sources */,
+				9F2FED952154452D00C200F9 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

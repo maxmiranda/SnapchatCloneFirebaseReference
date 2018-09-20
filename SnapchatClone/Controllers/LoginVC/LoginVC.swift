@@ -2,7 +2,7 @@
 //  LoginVC.swift
 //  SnapchatClone
 //
-//  Created by Max Miranda on 9/20/18.
+//  Created by Max Miranda on 9/18/18.
 //  Copyright © 2018 ___MaxAMiranda___. All rights reserved.
 //
 
@@ -42,13 +42,14 @@ class LoginVC: UIViewController {
     
     func handleLogin() {
         let email = "wubba@lubbadubdub.com"
-        let password = "ImMrMeseeks"
-        /* PART 1A*/
+        let password = "ImMrMeeseeks"
+        /* PART 1A START*/
         
         /* PART 1A FINISH*/
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 self.loginRegisterButton.isUserInteractionEnabled = true
+                print(error)
                 self.displayAlert(title: "There was an error", message: "Trying to sign you in")
                 return
             } else {
@@ -60,15 +61,16 @@ class LoginVC: UIViewController {
     }
     
     func handleRegister() {
-        let name = "Rick"
-        let number = "(696)969-6969"
+        let name = "Rick Morty"
+        let number = "6969696969"
         let email = "wubba@lubbadubdub.com"
-        let password = "mrpoopybutthole"
+        let password = "ImMrMeeseeks"
         /* PART 1B START*/
         /* PART 1B FINISH*/
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 self.loginRegisterButton.isUserInteractionEnabled = true
+                print(error)
                 self.displayAlert(title: "There was an error", message: "Trying to make you")
                 return
             } else {
@@ -111,6 +113,11 @@ class LoginVC: UIViewController {
             nameTextField.isHidden = false
             phoneNumberTextField.isHidden = false
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /* PART 1C START*/
+        
+        /* PART 1C FINISH*/
     }
 }
 
