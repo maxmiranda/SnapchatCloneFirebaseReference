@@ -24,6 +24,7 @@
 		9F2FED8E21543F5600C200F9 /* SnapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8D21543F5600C200F9 /* SnapImage.swift */; };
 		9F2FED912154403D00C200F9 /* SnapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED902154403D00C200F9 /* SnapUser.swift */; };
 		9F2FED952154452D00C200F9 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */; };
+		9F2FED972154480100C200F9 /* ShowImageVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED962154480100C200F9 /* ShowImageVC - UISetup.swift */; };
 		CF235B641041ED7DF6CAFA7B /* Pods_SnapchatClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCEE17E72E8857C42689DC1 /* Pods_SnapchatClone.framework */; };
 		E7B18D1310BFD3FEE07B74E7 /* Pods_SnapchatCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699302F709B9C9939E2C3A1A /* Pods_SnapchatCloneTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		9F2FED8D21543F5600C200F9 /* SnapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapImage.swift; sourceTree = "<group>"; };
 		9F2FED902154403D00C200F9 /* SnapUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapUser.swift; sourceTree = "<group>"; };
 		9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		9F2FED962154480100C200F9 /* ShowImageVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowImageVC - UISetup.swift"; sourceTree = "<group>"; };
 		DDCEE17E72E8857C42689DC1 /* Pods_SnapchatClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2090E87B00A1E01E101B745 /* Pods_SnapchatCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2FED872154384000C200F9 /* ShowImageVC.swift */,
+				9F2FED962154480100C200F9 /* ShowImageVC - UISetup.swift */,
 			);
 			path = ShowImageVC;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			files = (
 				9F2FED882154384000C200F9 /* ShowImageVC.swift in Sources */,
 				9F2FED8C21543DEE00C200F9 /* FeedVC - UISetup.swift in Sources */,
+				9F2FED972154480100C200F9 /* ShowImageVC - UISetup.swift in Sources */,
 				9F2FED832154380800C200F9 /* FeedVC.swift in Sources */,
 				9F2FED8A21543D1700C200F9 /* FeedVC - TableViewFunctions.swift in Sources */,
 				9F2FED912154403D00C200F9 /* SnapUser.swift in Sources */,

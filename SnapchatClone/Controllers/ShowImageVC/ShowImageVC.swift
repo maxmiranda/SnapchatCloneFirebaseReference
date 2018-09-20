@@ -13,10 +13,11 @@ class ShowImageVC: UIViewController {
 
     var nameLabel: UILabel!
     var snapImage: SnapImage!
-
+    var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupImageView()
+        setupNameLabel()
         // Do any additional setup after loading the view.
     }
 

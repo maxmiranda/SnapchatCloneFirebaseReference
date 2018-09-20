@@ -12,7 +12,7 @@ class SnapImage {
     var sender: String
     var sentTo: String
     var timeSent: NSDate
-    var opened: Boolean
+    var opened: Bool
     var image: UIImage
     
     init(sentBy: String, sentTo: String, timeSent: NSDate, image: UIImage) {
