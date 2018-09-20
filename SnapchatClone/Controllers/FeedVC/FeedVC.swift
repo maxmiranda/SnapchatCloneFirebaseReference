@@ -30,9 +30,18 @@ class FeedVC: UIViewController {
         if let ourUser = user {
             userID = user.uid
         }
-        let imageNames : [String] = []
-        let sentBy : [String] = []
-        let timeSent : [NSDate] = []
+        let imageNames : [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        let sentBy : [String] = ["Daniel", "Max", "Levi", "Robert A. Ackerman", "Zach", "Aayush", "Ayush", "Noah", "Tiger", "Mobi"]
+        let timeSent : [Date] = [Date(timeIntervalSince1970: 20),
+                                 Date(timeIntervalSince1970: 200),
+                                 Date(timeIntervalSince1970: 200),
+                                 Date(timeIntervalSince1970: 2000),
+                                 Date(timeIntervalSince1970: 20000),
+                                 Date(timeIntervalSince1970: 200000),
+                                 Date(timeIntervalSince1970: 2000000),
+                                 Date(timeIntervalSince1970: 20000000),
+                                 Date(timeIntervalSince1970: 200000000),
+                                 Date(timeIntervalSince1970: 2000000000),]
         for i in 0 ..< imageNames.count {
             var si = SnapImage(sentBy: sentBy[i], sentTo: userID, timeSent: timeSent[i], image: UIImage(named: imageNames[i])!)
             arrayOfSnaps.append(si)
