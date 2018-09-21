@@ -18,14 +18,12 @@ class ShowImageVC: UIViewController {
         super.viewDidLoad()
         setupImageView()
         setupNameLabel()
+        setupNavigationBar()
         // Do any additional setup after loading the view.
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
+    
+    @objc func done() {
+        performSegue(withIdentifier: "toFeedFromShowImage", sender: self)
     }
  
 

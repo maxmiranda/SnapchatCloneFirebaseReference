@@ -55,7 +55,6 @@ class LoginVC: UIViewController {
         var password = "ImMrMeeseeks"
         /* PART 1A START*/
         
-        
         /* PART 1A FINISH*/
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
@@ -64,9 +63,7 @@ class LoginVC: UIViewController {
                 self.displayAlert(title: "There was an error", message: "Trying to sign you in")
                 return
             } else {
-                /* PART 1C START*/
-            
-                /* PART 1C FINISH*/
+                self.ourUserID = user?.uid
                 self.performSegue(withIdentifier: "toMainFeed", sender: self)
             }
         })
@@ -102,9 +99,7 @@ class LoginVC: UIViewController {
                         print(error)
                         return
                     } else {
-                        /* PART 1C START*/
-                        
-                        /* PART 1C FINISH*/
+                        self.ourUserID = user?.uid
                         self.performSegue(withIdentifier: "toMainFeed", sender: self)
                     }
                 })

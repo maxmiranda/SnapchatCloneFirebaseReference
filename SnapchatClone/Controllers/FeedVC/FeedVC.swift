@@ -16,6 +16,7 @@ class FeedVC: UIViewController {
     var tableView: UITableView!
     var arrayOfSnaps: [SnapImage]!
     
+    var selectedImage: SnapImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,12 @@ class FeedVC: UIViewController {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "My Snaps"
+    }
+    
     func setupArrayOfSnaps() {
         arrayOfSnaps = []
-        var userName = "efiji"
         let imageNames : [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         let sentBy : [String] = ["Daniel", "Max", "Levi", "Robert A. Ackerman", "Zach", "Aayush", "Ayush", "Noah", "Tiger", "Mobi"]
         let timeSent : [Date] = [Date(timeIntervalSince1970: 20),
@@ -42,14 +46,14 @@ class FeedVC: UIViewController {
                                  Date(timeIntervalSince1970: 200000000),
                                  Date(timeIntervalSince1970: 2000000000),]
         for i in 0 ..< imageNames.count {
-            var si = SnapImage(sentBy: sentBy[i], sentTo: userName, timeSent: timeSent[i], image: UIImage(named: imageNames[i])!)
+            var si = SnapImage(sentBy: sentBy[i], sentTo: "Me", timeSent: timeSent[i], image: UIImage(named: imageNames[i])!)
             arrayOfSnaps.append(si)
         }
     }
     
     func setupTableView() {
         /* PART 2A START */
-        
+    
         /* PART 2A FINISH */
     }
     
@@ -65,6 +69,10 @@ class FeedVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "toShowImage" {
+            var destination = segue.destination as! ShowImageVC
+            destination.snapImage = selectedImage
+        }
     }
 
 }
