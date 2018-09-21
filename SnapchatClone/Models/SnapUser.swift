@@ -14,10 +14,11 @@ class SnapUser {
     var phoneNumber : String
     var email : String
 
-    init(uid: String, name: String, phoneNumber : String, email: String) {
+    init(_ uid: String, _ name: String, _ phoneNumber : String, _ email: String) {
         self.uid = uid
         self.name = name
         self.phoneNumber = phoneNumber
         self.email = email
     }
+    
 }

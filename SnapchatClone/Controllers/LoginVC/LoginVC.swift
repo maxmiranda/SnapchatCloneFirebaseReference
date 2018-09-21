@@ -21,6 +21,8 @@ class LoginVC: UIViewController {
     
     var loginRegisterButton: UIButton!
     
+    var ourUserID: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +33,14 @@ class LoginVC: UIViewController {
         setupTextFields()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+        loginRegisterButton.isUserInteractionEnabled = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
     @objc func handleLoginOrRegister() {
         loginRegisterButton.isUserInteractionEnabled = false
         if loginRegisterSegControl.selectedSegmentIndex == 0 {
@@ -41,9 +51,10 @@ class LoginVC: UIViewController {
     }
     
     func handleLogin() {
-        let email = "wubba@lubbadubdub.com"
-        let password = "ImMrMeeseeks"
+        var email = "wubba@lubbadubdub.com"
+        var password = "ImMrMeeseeks"
         /* PART 1A START*/
+        
         
         /* PART 1A FINISH*/
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
@@ -53,6 +64,9 @@ class LoginVC: UIViewController {
                 self.displayAlert(title: "There was an error", message: "Trying to sign you in")
                 return
             } else {
+                /* PART 1C START*/
+            
+                /* PART 1C FINISH*/
                 self.performSegue(withIdentifier: "toMainFeed", sender: self)
             }
         })
@@ -61,11 +75,12 @@ class LoginVC: UIViewController {
     }
     
     func handleRegister() {
-        let name = "Rick Morty"
-        let number = "6969696969"
-        let email = "wubba@lubbadubdub.com"
-        let password = "ImMrMeeseeks"
+        var name = "Rick Morty"
+        var number = "6969696969"
+        var email = "wubba@lubbadubdub.com"
+        var password = "ImMrMeeseeks"
         /* PART 1B START*/
+        
         /* PART 1B FINISH*/
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
@@ -87,6 +102,9 @@ class LoginVC: UIViewController {
                         print(error)
                         return
                     } else {
+                        /* PART 1C START*/
+                        
+                        /* PART 1C FINISH*/
                         self.performSegue(withIdentifier: "toMainFeed", sender: self)
                     }
                 })

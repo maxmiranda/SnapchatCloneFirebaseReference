@@ -10,11 +10,14 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
+    var personName: UILabel!
+    var dateSent: UILabel!
+    var redSquare: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        /* PART 2D START */
+        /* PART 2E START */
         
-        /* PART 2D FINISH */
+        /* PART 2E FINISH */
     }
 
 }

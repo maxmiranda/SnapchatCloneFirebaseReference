@@ -10,14 +10,11 @@ import UIKit
 
 extension ShowImageVC {
     func setupImageView() {
-        
+        imageView = UIImageView(image: snapImage.image)
     }
-    
     func setupNameLabel() {
         var labelText : String? = nil
-        if let snap = snapImage {
-            labelText = snapImage.sender
-        }
+        labelText = snapImage.sender
         nameLabel = UILabel(frame: CGRect())
         nameLabel.text = labelText
         nameLabel.backgroundColor = .none
