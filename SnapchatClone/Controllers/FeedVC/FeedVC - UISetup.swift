@@ -25,6 +25,9 @@ extension FeedVC {
         navigationItem.setHidesBackButton(true, animated:true);
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
         navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Friends List", style: .plain, target: self, action: #selector(friendsListPressed))
+        navigationItem.rightBarButtonItem?.tintColor = .black
+
     }
     
 }

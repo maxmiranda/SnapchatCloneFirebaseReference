@@ -19,12 +19,15 @@
 		9F2FED7E2154298000C200F9 /* LoginVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED7D2154298000C200F9 /* LoginVC - UISetup.swift */; };
 		9F2FED832154380800C200F9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED822154380800C200F9 /* FeedVC.swift */; };
 		9F2FED882154384000C200F9 /* ShowImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED872154384000C200F9 /* ShowImageVC.swift */; };
-		9F2FED8A21543D1700C200F9 /* FeedVC - TableViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8921543D1700C200F9 /* FeedVC - TableViewFunctions.swift */; };
+		9F2FED8A21543D1700C200F9 /* FeedVC - TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8921543D1700C200F9 /* FeedVC - TableView.swift */; };
 		9F2FED8C21543DEE00C200F9 /* FeedVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8B21543DEE00C200F9 /* FeedVC - UISetup.swift */; };
 		9F2FED8E21543F5600C200F9 /* SnapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED8D21543F5600C200F9 /* SnapImage.swift */; };
 		9F2FED912154403D00C200F9 /* SnapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED902154403D00C200F9 /* SnapUser.swift */; };
 		9F2FED952154452D00C200F9 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */; };
 		9F2FED972154480100C200F9 /* ShowImageVC - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FED962154480100C200F9 /* ShowImageVC - UISetup.swift */; };
+		9FA477EC2335DC9300FE7094 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA477EB2335DC9300FE7094 /* FriendsViewController.swift */; };
+		9FA477EE2335E97B00FE7094 /* FriendsViewController - table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA477ED2335E97B00FE7094 /* FriendsViewController - table.swift */; };
+		9FA477F02335EABB00FE7094 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA477EF2335EABB00FE7094 /* FriendsCell.swift */; };
 		CF235B641041ED7DF6CAFA7B /* Pods_SnapchatClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCEE17E72E8857C42689DC1 /* Pods_SnapchatClone.framework */; };
 		E7B18D1310BFD3FEE07B74E7 /* Pods_SnapchatCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699302F709B9C9939E2C3A1A /* Pods_SnapchatCloneTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,12 +74,15 @@
 		9F2FED7D2154298000C200F9 /* LoginVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC - UISetup.swift"; sourceTree = "<group>"; };
 		9F2FED822154380800C200F9 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		9F2FED872154384000C200F9 /* ShowImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageVC.swift; sourceTree = "<group>"; };
-		9F2FED8921543D1700C200F9 /* FeedVC - TableViewFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - TableViewFunctions.swift"; sourceTree = "<group>"; };
+		9F2FED8921543D1700C200F9 /* FeedVC - TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - TableView.swift"; sourceTree = "<group>"; };
 		9F2FED8B21543DEE00C200F9 /* FeedVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - UISetup.swift"; sourceTree = "<group>"; };
 		9F2FED8D21543F5600C200F9 /* SnapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapImage.swift; sourceTree = "<group>"; };
 		9F2FED902154403D00C200F9 /* SnapUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapUser.swift; sourceTree = "<group>"; };
 		9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		9F2FED962154480100C200F9 /* ShowImageVC - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowImageVC - UISetup.swift"; sourceTree = "<group>"; };
+		9FA477EB2335DC9300FE7094 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		9FA477ED2335E97B00FE7094 /* FriendsViewController - table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsViewController - table.swift"; sourceTree = "<group>"; };
+		9FA477EF2335EABB00FE7094 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		DDCEE17E72E8857C42689DC1 /* Pods_SnapchatClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2090E87B00A1E01E101B745 /* Pods_SnapchatCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2FED4A2154245000C200F9 /* AppDelegate.swift */,
-				9F2FED932154450C00C200F9 /* Cells */,
+				9F2FED932154450C00C200F9 /* Views */,
 				9F2FED92215444F600C200F9 /* Controllers */,
 				9F2FED8F21543FF900C200F9 /* Models */,
 				9F2FED4E2154245000C200F9 /* Main.storyboard */,
@@ -192,7 +198,7 @@
 			children = (
 				9F2FED822154380800C200F9 /* FeedVC.swift */,
 				9F2FED8B21543DEE00C200F9 /* FeedVC - UISetup.swift */,
-				9F2FED8921543D1700C200F9 /* FeedVC - TableViewFunctions.swift */,
+				9F2FED8921543D1700C200F9 /* FeedVC - TableView.swift */,
 			);
 			path = FeedVC;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 		9F2FED92215444F600C200F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9FA477EA2335DC7B00FE7094 /* FriendsVC */,
 				9F2FED862154382D00C200F9 /* ShowImageVC */,
 				9F2FED81215437E600C200F9 /* FeedVC */,
 				9F2FED7C2154296B00C200F9 /* LoginVC */,
@@ -225,12 +232,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9F2FED932154450C00C200F9 /* Cells */ = {
+		9F2FED932154450C00C200F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9F2FED942154452D00C200F9 /* FeedTableViewCell.swift */,
+				9FA477EF2335EABB00FE7094 /* FriendsCell.swift */,
 			);
-			path = Cells;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9FA477EA2335DC7B00FE7094 /* FriendsVC */ = {
+			isa = PBXGroup;
+			children = (
+				9FA477EB2335DC9300FE7094 /* FriendsViewController.swift */,
+				9FA477ED2335E97B00FE7094 /* FriendsViewController - table.swift */,
+			);
+			path = FriendsVC;
 			sourceTree = "<group>";
 		};
 		C9A4BF921A465C36B82A9429 /* Frameworks */ = {
@@ -384,7 +401,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SnapchatClone/Pods-SnapchatClone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -393,7 +409,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -468,13 +483,16 @@
 				9F2FED8C21543DEE00C200F9 /* FeedVC - UISetup.swift in Sources */,
 				9F2FED972154480100C200F9 /* ShowImageVC - UISetup.swift in Sources */,
 				9F2FED832154380800C200F9 /* FeedVC.swift in Sources */,
-				9F2FED8A21543D1700C200F9 /* FeedVC - TableViewFunctions.swift in Sources */,
+				9FA477EC2335DC9300FE7094 /* FriendsViewController.swift in Sources */,
+				9F2FED8A21543D1700C200F9 /* FeedVC - TableView.swift in Sources */,
 				9F2FED912154403D00C200F9 /* SnapUser.swift in Sources */,
+				9FA477EE2335E97B00FE7094 /* FriendsViewController - table.swift in Sources */,
 				9F2FED7E2154298000C200F9 /* LoginVC - UISetup.swift in Sources */,
 				9F2FED4D2154245000C200F9 /* LoginVC.swift in Sources */,
 				9F2FED4B2154245000C200F9 /* AppDelegate.swift in Sources */,
 				9F2FED8E21543F5600C200F9 /* SnapImage.swift in Sources */,
 				9F2FED952154452D00C200F9 /* FeedTableViewCell.swift in Sources */,
+				9FA477F02335EABB00FE7094 /* FriendsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

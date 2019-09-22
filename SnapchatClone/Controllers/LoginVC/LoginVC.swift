@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 class LoginVC: UIViewController {
     var logoImageView: UIImageView!
@@ -25,12 +24,54 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor(r: 255, g: 254, b: 0)
         setupLogo()
         setupSegControl()
         setupLoginRegisterButton()
         setupTextFields()
+    }
+    
+    // FUNCTION TO CHANGE 1
+    func handleLogin() {
+        var email = emailTextField.text!
+        var password = passwordTextField.text!
+        let auth = Auth.auth()
+        auth.signIn(withEmail: email, password: password) { (signedInUser, signInError) in
+            guard signInError == nil else {
+                self.displayAlert(title: "Error", message: "You fucked up")
+                return
+            }
+            guard let user = signedInUser else {
+                self.displayAlert(title: "Error", message: "You fucked up, there's no user, bitch")
+                return
+            }
+            self.performSegue(withIdentifier: "toMainFeed", sender: self)
+        }
+    }
+    
+    // FUNCTION TO CHANGE 2
+    func handleRegister() {
+        var name = nameTextField.text!
+        var number = phoneNumberTextField.text!
+        var email = emailTextField.text!
+        var password = passwordTextField.text!
+        let auth = Auth.auth()
+        auth.createUser(withEmail: email, password: password) { (user, error) in
+            guard error == nil else {
+                self.displayAlert(title: "Error", message: "You fucked up signing up")
+                return
+            }
+            guard user != nil else {
+                self.displayAlert(title: "Error", message: "You fucked up signing up, there is no user")
+                return
+            }
+            let db = Database.database().reference()
+            let usersNode = db.child("Users")
+            let newUserId = usersNode.childByAutoId().key
+            let userNode = usersNode.child(newUserId)
+            userNode.updateChildValues(["name": name, "email": email, "phoneNumber": number])
+            self.performSegue(withIdentifier: "toMainFeed", sender: self)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +82,7 @@ class LoginVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
+    
     @objc func handleLoginOrRegister() {
         loginRegisterButton.isUserInteractionEnabled = false
         if loginRegisterSegControl.selectedSegmentIndex == 0 {
@@ -48,63 +90,6 @@ class LoginVC: UIViewController {
         } else {
             handleRegister()
         }
-    }
-    
-    func handleLogin() {
-        var email = "wubba@lubbadubdub.com"
-        var password = "ImMrMeeseeks"
-        /* PART 1A START*/
-        
-        /* PART 1A FINISH*/
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-            if let error = error {
-                self.loginRegisterButton.isUserInteractionEnabled = true
-                print(error)
-                self.displayAlert(title: "There was an error", message: "Trying to sign you in")
-                return
-            } else {
-                self.ourUserID = user?.uid
-                self.performSegue(withIdentifier: "toMainFeed", sender: self)
-            }
-        })
-        
-        
-    }
-    
-    func handleRegister() {
-        var name = "Rick Morty"
-        var number = "6969696969"
-        var email = "wubba@lubbadubdub.com"
-        var password = "ImMrMeeseeks"
-        /* PART 1B START*/
-        
-        /* PART 1B FINISH*/
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            if let error = error {
-                self.loginRegisterButton.isUserInteractionEnabled = true
-                print(error)
-                self.displayAlert(title: "There was an error", message: "Trying to make you")
-                return
-            } else {
-                
-                guard let uid = user?.uid else {
-                    return
-                }
-                let ref = Database.database().reference()
-                let userRef = ref.child("users").child(uid)
-                let values = ["name": name, "number": number, "email": email]
-                
-                userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
-                    if error != nil {
-                        print(error)
-                        return
-                    } else {
-                        self.ourUserID = user?.uid
-                        self.performSegue(withIdentifier: "toMainFeed", sender: self)
-                    }
-                })
-            }
-        })
     }
     
     func displayAlert(title: String, message: String) {
@@ -128,9 +113,7 @@ class LoginVC: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /* PART 1C START*/
         
-        /* PART 1C FINISH*/
     }
 }
 

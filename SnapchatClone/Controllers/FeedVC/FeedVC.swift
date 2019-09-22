@@ -52,9 +52,6 @@ class FeedVC: UIViewController {
     }
     
     func setupTableView() {
-        /* PART 2A START */
-    
-        /* PART 2A FINISH */
     }
     
     @objc func logOut() {
@@ -65,6 +62,10 @@ class FeedVC: UIViewController {
         }
         navigationController?.popViewController(animated: true)
     }
+    
+    @objc func friendsListPressed() {
+        performSegue(withIdentifier: "toFriendsList", sender: self)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -72,7 +73,7 @@ class FeedVC: UIViewController {
         if segue.identifier == "toShowImage" {
             var destination = segue.destination as! ShowImageVC
             destination.snapImage = selectedImage
-        }
+        } 
     }
 
 }
